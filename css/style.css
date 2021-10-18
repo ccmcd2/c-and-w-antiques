@@ -81,11 +81,11 @@ main h1{
     padding: 0.5rem 1rem 0.5rem 2rem;
     width: 100%;
     height: auto;
-    color: rgb(99, 36, 37);
+    color: rgb(179, 97, 43);
 }
 
 .breadcrumbs-first, .breadcrumbs-second, .breadcrumbs-third {
-    color: rgb(99, 36, 37);
+    color: rgb(179, 97, 43);
 }
 /* End of Breadcrumbs */
 
@@ -107,6 +107,20 @@ main h1{
     width: 30%;
     height: 17rem;
     margin-right: 2rem;
+    display: flex;
+    position: relative;
+}
+
+.feature-img img {
+    position: aboslute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .feature-button {
@@ -135,7 +149,7 @@ main h1{
     margin-block-start: 0;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
     .feature-container {
         flex-flow: column wrap;
         align-items: center;
@@ -144,12 +158,12 @@ main h1{
     }
 
     .feature-img {
-        width: 75%;
+        width: 88%;
         margin: 0 0 1rem 0;
     }
 
     .feature-info {
-        width: 75%;
+        width: 88%;
         padding: 0;
         margin: 0;
     }
@@ -186,6 +200,22 @@ main h1{
     background-color:rgb(179, 97, 43);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    display: flex;
+    position: relative;
+}
+
+.product-img img {
+    position: aboslute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .product-container p {
@@ -201,20 +231,20 @@ main h1{
     margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
     .products {
         padding: 5% 0 5% 0;
     }
 
     .product-container {
-        width: 40vw;
+        width: 35vw;
         margin: 0;
         margin-bottom: 10%;
     }
 
     .product-img {
-        width: 40vw;
-        height: 40vw;
+        width: 35vw;
+        height: 35vw;
     }
 }
 /* End of Product Card */
@@ -266,7 +296,7 @@ main h1{
 
 .answer-container {
     background-color: rgb(245, 245, 245);
-    width: 56%;
+    width: 53%;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 0.5rem 2rem 0.5rem 2rem;
@@ -276,7 +306,7 @@ main h1{
     font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
     .question-container {
         width: 88%;
     }
