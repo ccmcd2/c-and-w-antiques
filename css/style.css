@@ -106,6 +106,7 @@ a:hover {
 .button-primary:hover {
     background-color: var(--secondary);
     border: 3px solid var(--secondary);
+    color: var(--white);
 }
 
 .button-secondary {
@@ -142,7 +143,7 @@ nav {
 .navbar-brand {
     display: block;
     overflow: hidden;
-    background: url("../img/logo.png") no-repeat 0 0/ contain transparent;
+    background: url("../img/logo.svg") no-repeat 0 0/ contain transparent;
     text-indent: -9999999999px;
     height: 2rem;
     max-width: calc(100%-3rem);
@@ -173,6 +174,7 @@ nav {
 
 .navbar.open, .dropdown.open > ul {
     display: block;
+    z-index: 1;
 }
 
 .navbar, .navbar .dropdown > ul {
@@ -189,7 +191,11 @@ nav {
 }
 
 .navbar .dropdown > ul {
-    background-color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.navbar .dropdown {
+    padding-right: 0.75rem;
 }
 
 .navbar .dropdown > ul a {
@@ -197,7 +203,7 @@ nav {
 }
 
 .navbar .dropdown > ul a:hover {
-    background-color: var(--primary);
+    background-color: var(--secondary);
 }
 
 .navbar .dropdown > a:after {
@@ -366,11 +372,16 @@ nav {
     margin: 0;
     color: var(--white);
     text-align: center;
+    font-size: 2rem;
 }
 
 @media screen and (min-width: 768px){
     .hero-container {
         height: 37vh;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
     }
 }
 
@@ -378,21 +389,30 @@ nav {
     .hero-container {
         height: 53vh;
     }
+
+    .hero-title {
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 3rem;
+    }
 }
 /* End of Hero */
 
 /* Breadcrumbs */
 .breadcrumbs-container {
-    background-color: #eeeeee;
+    background-color: var(--tertiary);
     margin: 0;
-    padding: 0.5rem 1rem 0.5rem 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     width: 100%;
     height: auto;
     color: rgb(179, 97, 43);
+    font-size: 0.8rem;
 }
 
 .breadcrumbs-first, .breadcrumbs-second, .breadcrumbs-third {
     color: rgb(179, 97, 43);
+    text-decoration: none;
+    font-size: 0.8rem;
 }
 /* End of Breadcrumbs */
 
@@ -498,8 +518,36 @@ nav {
 }
 /* End of Feature */
 
-/* Carousel */
-.carousel-container {
+/* How to Buy Info Block */
+.how-to-buy {
+    background-color: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.how-to-buy h3 {
+    text-align: center;
+    margin: 0;
+}
+
+.how-to-buy p {
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .how-to-buy {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+/* End of How to Buy Info Block */
+
+/* Shop by Category */
+.shop-by-category-container {
     background-color: var(--secondary);
     padding: 2rem;
     display: flex;
@@ -507,26 +555,44 @@ nav {
     justify-content: center;
     align-content: center;
     align-items: center;
-    overflow: hidden;
+    max-width: 100%;
 }
 
-.carousel-container h2 {
+.shop-by-category-container.shop-page {
+    background-color: var(--white);
+}
+
+.shop-by-category-container h2 {
     color: var(--white);
     margin: 0 0 2rem 0;
 }
 
+.shop-by-category-container.shop-page h2 {
+    color: var(--primary);
+}
+
 .category-container {
-    width: 55rem;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.category-row {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-content: center;
-    align-items: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .category div {
-    height: 10rem;
-    width: 10rem;
+    height: 7rem;
+    width: 7rem;
     border-radius: 50%;
 }
 
@@ -544,23 +610,85 @@ nav {
     margin-bottom: 2rem;
 }
 
-.category {
-    width: 10rem;
-    margin: 0 0.5rem;
+.category.shop-page p {
+    color: var(--black);
 }
-/* End of Carousel */
+
+.category {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .category div {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .category-container {
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+
+    .category-row {
+        width: auto;
+    }
+
+    .category div {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .category div {
+        width: 9rem;
+        height: 9rem;
+    }
+}
+/* End of Shopy by Category */
 
 /* Product Card */
+.products {
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--white);
+}
+
+.products h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.even-rows {
+    flex: 1 0 34%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
 .product-container {
     background-color: rgb(235, 235, 235);
-    width: 35vh;
-    margin: 2rem;
+    width: 140px;
     border-radius: 15px;
+    margin: 1rem 0.25rem;
 }
 
 .product-img {
-    height: 35vh;
-    width: 35vh;
+    width: 140px;
     background-color:rgb(179, 97, 43);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -592,27 +720,60 @@ nav {
 }
 
 .product-container .product-name {
-    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    height: 3rem;
+    width: 100%;
+    overflow-wrap: break-word;
 }
 
 .product-container .product-price {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
 }
 
-@media only screen and (max-width: 900px) {
-    .products {
-        padding: 5% 0 5% 0;
-    }
-
+@media screen and (min-width: 475px) {
     .product-container {
-        width: 35vw;
-        margin: 0;
-        margin-bottom: 10%;
+        width: 200px;
     }
 
     .product-img {
-        width: 35vw;
-        height: 35vw;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .product-container {
+        width: 250px;
+    }
+
+    .product-img {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .even-rows {
+        flex: 1 0 26%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .products {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .product-container {
+        width: 300px;
+    }
+
+    .product-img {
+        width: 300px;
     }
 }
 /* End of Product Card */
@@ -690,29 +851,25 @@ nav {
 
 /* Today's Hours */
 .hours-container {
-    padding: 2rem;
-    background-color: var(--white);
+    padding: 2rem 0 0 0;
+    background-color: var(--secondary);
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .hours-container h3 {
     margin-top: 0;
     text-align: center;
+    color: var(--white);
+    margin-bottom: 0.5rem;
 }
 
-.all-hours-links {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    color: var(--black);
-}
-
-.all-hours-link {
-    color: var(--black);
-    text-decoration: none;
-    font-weight: 700;
+.hours-container h3 span{
+    font-size: 1.25rem;
 }
 
 .hours-list {
@@ -725,9 +882,11 @@ nav {
 }
 
 #hours-left {
-    width: 30%;
+    width: 70%;
     list-style-type: none;
     padding: 0;
+    color: var(--white);
+    margin: 0;
 }
 
 #hours-right {
@@ -735,14 +894,8 @@ nav {
     list-style-type: none;
     text-align: right;
     padding: 0;
-}
-
-.hours-dropdown {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    color: var(--white);
+    margin: 0;
 }
 
 @media screen and (min-width: 430px) {
