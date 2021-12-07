@@ -27,3 +27,13 @@ dropdownToggler.forEach(function(dropdown){
         this.closest(".dropdown").classList.toggle("open");
     }
 });
+
+
+
+let dropdownToggler2 = document.querySelectorAll(".question-container > a");
+
+dropdownToggler2.forEach(function(question-container){
+    question-container.onclick = function(e){
+        this.closest(".answer-container").classList.toggle("open");
+    }
+});
