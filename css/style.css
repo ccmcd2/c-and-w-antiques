@@ -1146,9 +1146,7 @@ div.submit {
 /* End of 404 Page */
 
 
-
-
-/* Contact Form
+/* Contact Form */
 .contact-header {
     text-align:center;
     color:rgb(179, 97, 43);
@@ -1196,11 +1194,11 @@ fieldset {
     }
 
     .contact-wrapper {
-        margin: 0 55% 0 0;
+        margin: 0 25% 0 0;
     }
 
 }
-End of Contact Form */
+/* End of Contact Form */
 
 
 /* Contact Form - Buttons */
@@ -1208,10 +1206,42 @@ End of Contact Form */
     display: inline-block;
     overflow: hidden;
     padding: 0.375rem 0.75rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     background-color: burlywood;
     cursor: pointer;
 }
 
 /* End of Contact Form - Buttons */
+
+/* Contact Form - Map */
+
+.google-map {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+
+    .contact-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .contact-wrapper .row {
+        flex: 1 0 40%;
+    }
+
+    .contact-wrapper .google-map {
+        flex: 1 0 30%;
+    }
+}
+
+/* End of Contact Form - Map */
