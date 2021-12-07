@@ -908,6 +908,54 @@ nav {
     }
 }
 /* End of Today's Hours */
+
+/* Location Description */
+.location {
+    padding: 2rem;
+    background-color: var(--tertiary);
+}
+
+.location h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.location p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .location {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+/* End of Location Description */
+
+/* Map */
+.map-info-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.map-info-container p {
+    margin-bottom: 2rem;
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .map-info-container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+/* Map
 /* End of Components */
 
 /* 404 Page */
