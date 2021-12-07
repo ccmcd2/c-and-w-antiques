@@ -1108,7 +1108,7 @@ div.submit {
 /* End of FAQ */
 /* End of Components */
 
-/* 404 Page */
+/* Error/Success Pages */
 .error-page {
     display: flex;
     flex-flow: column nowrap;
@@ -1137,10 +1137,23 @@ div.submit {
     text-align: center;
 }
 
+.error-page i {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.error-page i.green {
+    color: green;
+}
+
+.error-page i.red {
+    color: maroon;
+}
+
 @media screen and (min-width: 992px) {
     .page-404 {
         padding-left: 10%;
         padding-right: 10%;
     }
 }
-/* End of 404 Page */
+/* End of Error/Success Pages */
