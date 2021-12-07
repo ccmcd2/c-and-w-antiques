@@ -44,54 +44,40 @@
                 </div>
             </div>
 
-            <div class="contact-header">
-                <h4>Contact Us</h4>
-            </div>
-            <div class="contact-wrapper">
-                <div class="row">
-                    <div class="col-md-12">
-                        <form method="post" action="registration.php" name="contact">
-                            <fieldset>
-                                <legend>Please fill in this form:</legend>
+            <div class="contact-info-container">
+                <h1>Contact Us</h1>
+                <p><a href="tel:817-637-7637" alt="817-637-7637"><i class="fas fa-phone-alt"></i></a>(817) 637-7637</p>
+                <p><a href="mailto:info@candwantiques.com" alt="info@candwantiques.com"><i class="fas fa-envelope"></i></a>hello@candwantiques.com</p>
+                <p><a href="https://www.facebook.com/CandWAntique/" alt="Link to Facebook page"><i class="fab fa-facebook"></i></a>@CandWAntique</p>
+                <p><a href="https://www.instagram.com/candwantiques/" alt="Link to Instagram page"><i class="fab fa-instagram"></i></a>@candwantiques</p>
 
-                                <div class="form-group">
-                                    <label for="firstName">First Name:</label>
-                                    <div class="form-control">
-                                        <input type="text" name="firstName" id="firstName" placeholder="First Name" autofocus required />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="lastName">Last Name:</label>
-                                    <div class="form-control">
-                                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" autofocus required />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <div class="form-control">
-                                        <input type="email" name="email" id="email" placeholder="user@domain.com" autofocus required />
-                                    </div>
-                                </div>
-
-                            <div class="form-group">
-                                <label for="comment">Comment:</label>
-                                <div class="form-control">
-                                    <textarea id="comment" name="comment" placeholder="Additional comments" maxlength="300"></textarea>
-                                </div>
-                            </div>
-                            
-                            <div class="btn-wrapper">
-                                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary" />
-                                <input type="reset" name="submit" id="reset" value="Reset Form"  class="btn btn-secondary" />
-                            </div>
-
-                            </fieldset>
-
-                        </form>
+                <h4>Send us a message, and we’ll get back to you as soon as we can.</h4>
+                <form method="post" action="registration.php" name="contact">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <div class="form-control">
+                            <input type="text" name="full-name" id="full-name" placeholder="Full Name" autofocus required>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="form-control">
+                            <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <div class="form-control">
+                            <textarea id="comment" name="comment" placeholder="Type your message here..." maxlength=1000"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="submit">
+                        <input type="submit" name="submit" id="submit" value="Send" class="button-primary">
+                    </div>
+                </form>
             </div>
         </main>
 

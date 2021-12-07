@@ -956,6 +956,88 @@ nav {
     }
 }
 /* Map
+
+/* Contact Info */
+.contact-info-container {
+    padding: 2rem;
+    background-color: var(--tertiary);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.contact-info-container p {
+    width: 295px;
+    margin: 0.5rem;
+}
+
+.contact-info-container h1 {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.contact-info-container p a i {
+    padding-right: 1rem;
+    color: var(--black);
+}
+
+form {
+    width: 100%;
+}
+
+.contact-info-container h4 {
+    color: var(--black);
+    text-align: center;
+}
+
+.form-control input, .form-control textarea {
+    width: 100%;
+    border: 2px solid var(--primary);
+    line-height: 1.25rem;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    background-color: var(--tertiary);
+    margin: 0.5rem 0;
+}
+
+.form-control input {
+    height: 2rem;
+}
+
+.form-control textarea {
+    height: 7rem;
+}
+
+div.submit {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.contact-info-container form label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+    .contact-info-container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    form, .contact-info-container h4 {
+        width: 65%;
+    }
+}
+/* End of Contact Info */
 /* End of Components */
 
 /* 404 Page */
@@ -998,7 +1080,7 @@ nav {
 
 
 
-/* Contact Form */
+/* Contact Form
 .contact-header {
     text-align:center;
     color:rgb(179, 97, 43);
@@ -1050,7 +1132,7 @@ fieldset {
     }
 
 }
-/* End of Contact Form */
+End of Contact Form */
 
 
 /* Contact Form - Buttons */
