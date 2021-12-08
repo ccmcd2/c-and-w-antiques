@@ -1148,3 +1148,24 @@ div.submit {
     }
 }
 /* End of Error/Success Pages */
+
+/* Creative Brief/SWOT Analysis Styles */
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+    overflow: scroll;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 1rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    text-transform: uppercase;
+    background-color: lightgrey;
+}
+/* End of Creative Brief/SWOT Analysis Styles */
