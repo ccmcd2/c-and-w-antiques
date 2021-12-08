@@ -1106,6 +1106,68 @@ div.submit {
     } 
 }
 /* End of FAQ */
+
+/* Owner Info */
+.about-container {
+    padding: 2rem;
+}
+
+.about-container h1 {
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+}
+
+.about-container p {
+    text-align: center;
+}
+
+.owner-img {
+    width: 70%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.owner-img img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 600px) {
+    .owner-img {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .owner-img {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about-container {
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .owner-img {
+        width: 50%;
+    }
+
+    .owner-info {
+        width: 47%;
+    }
+}
+/* End of Owner Info */
 /* End of Components */
 
 /* Error/Success Pages */
